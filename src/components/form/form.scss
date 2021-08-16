@@ -5,10 +5,24 @@ form {
   display: inline-block;
   margin: auto;
   width: 200px;
+  text-align: left;
+
+  .go-btn{
+    background-color:palevioletred ;
+    color: wheat;
+    font-size: 20px;
+    margin-left: 1rem;
+    
+
+    &:hover, &.active {
+      background: wheat;
+      color: palevioletred;
+    }
+  }
 
   label {
     display: flex;
-    margin: 1rem 0;
+    margin: 1rem;
 
     &.methods {
       span {
@@ -18,7 +32,8 @@ form {
         background: #ccc;
 
         &:hover, &.active {
-          background: #fff;
+          background: palevioletred;
+          color: wheat;
         }
       }
     }
