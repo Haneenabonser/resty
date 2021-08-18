@@ -7,9 +7,9 @@ import { useState } from "react";
 
 
 function Results(props) {
-  const [result, setResult] = useState(
-    JSON.parse(localStorage.getItem("storage")) || []
-  );
+  // const [Data, setData] = useState(
+  //   JSON.parse(localStorage.getItem("storage")) || []
+  // );
   return (
     <div data-testid="result">
       {props.data &&
@@ -18,10 +18,10 @@ function Results(props) {
           <JSONPretty data={props.data.headers} />
 
           "Count" :
-          <JSONPretty data={props.data.data.count} />
+          <JSONPretty data={props.data.count} />
 
           "Results" :
-          <JSONPretty data={props.data.data.results} />
+          <JSONPretty data={props.data.results} />
         </>
       }
     </div>

@@ -1,19 +1,17 @@
-import React from 'react';
+import React from 'react'
 
 function History(props) {
+   function viewResults(result){
+        props.historyfunc(result);
+    }
     return (
         <div>
-            <h3>Methods List :</h3>
-            {props.history.map((item, idx) => {
-                return (
-                    <ul>
-                        <span className={item.method} key={idx}>
-                            {item.method.toUpperCase()} : {item.url}
-                        </span>
-                    </ul>
-                );
-            })}
+            <ul>
+               {props.history.map((item,index)=>{
+                   return(<li key={index} onClick={()=>{viewResults(item.result)}}>{item.method} {item.url}</li>)
+               })} 
+            </ul>
         </div>
-    );
+    )
 }
 export default History;
