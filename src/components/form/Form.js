@@ -10,13 +10,13 @@ function Form(props) {
   const [showTextArea, setShowTextArea] = useState(false);
   const [body, setBody] = useState();
 
-  const [storage, setStorage] = useState(
-    JSON.parse(localStorage.getItem("storage")) || []
-  );
-  const saveStorageData = async (data) => {
-    setStorage([...storage, data]);
-    await localStorage.setItem("storage", JSON.stringify(storage));
-  };
+  // const [storage, setStorage] = useState(
+  //   JSON.parse(localStorage.getItem("storage")) || []
+  // );
+  // const saveStorageData = async (data) => {
+  //   setStorage([...storage, data]);
+  //   await localStorage.setItem("storage", JSON.stringify(storage));
+  // };
 
 
 
